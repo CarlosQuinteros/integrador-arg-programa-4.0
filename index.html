@@ -10,6 +10,7 @@
         integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 
 <body>
@@ -41,19 +42,52 @@
         </div>
     </section>
 
-    <section id="servicios">
+    <section id="servicios" class="my-5"> 
         <!-- aqui deben estar los servicios que ofrecemos de manera alternada con una imagen-->
         <div class="container">
-            <h1>Nuestros Servicios</h1>
+            <h1 class="text-center">Nuestro Servicios</h1>
+            <hr>
+            <article class="row d-flex justify-content-center mt-4">
+                <div class="col-6 col-lg-6 p-4 d-none d-lg-block">
+                    <img src="image/servicio-desarrollo.png" class="img-fluid" alt="servicio-desarrollo">
+                </div>
+                <div class="col-12 col-lg-6 p-5">
+                    <h4 class="text-center text-bg-dark rounded-2 p-2">Desarrollo de Software</h4>
+                    <ul id="listaServiciosDesarrollo" class="mt-4"></ul>
+                </div>
+            </article>
+            <article class="row d-flex justify-content-center">
+                <div class="col-12 col-lg-6 p-5">
+                    <h4 class="text-center text-bg-dark rounded-2 p-2">Metodologías Agiles</h4>
+                    <ul id="listaServiciosMetodologia" class="mt-4"></ul>
+                </div>
+                <div class="col-6 col-lg-6 d-none d-lg-block">
+                    <img src="image/servicio-metodologia-agile.png" class="img-fluid" alt="servicio-desarrollo">
+                </div>
+            </article>
         </div>
     </section>
 
     <section id="equipo">
         <!-- aqui van nuestros card con nuestras imagenes, cargas la nuestra en la carpeta images-->
+        <div class="container">
+            <h1 class="text-center">Nuestros Equipo</h1>
+            <hr>
+            <div class="row d-flex justify-content-center" style="height: 500px;">
+                <!--card de cada integrante-->    
+            </div>
+        </div>
     </section>
 
     <section id="contacto">
         <!-- formulario de contacto-->
+        <div class="container">
+            <h1 class="text-center">Contacto</h1>
+            <hr>
+            <div class="row">
+                <!--contenido-->
+            </div>
+        </div>
     </section>
 
     <section id="footer" class="footer">

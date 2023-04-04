@@ -32,3 +32,20 @@ h2{
     transform: scale(1.12);
     box-shadow: 0px 10px 52px 28px rgba(0,0,0,0.1);
 }
+
+
+hr {
+    border-top: 10px solid #1a3a75;
+    width: 70px;
+    border-radius: 5px;
+    margin: auto;
+    opacity: 1;
+  }
+
+h1{
+    font-weight: bold;
+}
+
+h4{
+    font-weight: 700;
+}
