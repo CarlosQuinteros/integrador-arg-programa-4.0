@@ -16,6 +16,33 @@
 <body>
     <section id="navbar">
         <!-- Aqui deber ir la barra de navegacion, sugiero que  -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+              <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+              <a class="navbar-brand" href="#">
+                <img src="image/logo pp.png" width="65" height="65">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item my-auto">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item my-auto">
+                    <a class="nav-link" href="#servicios">Servicios</a>
+                  </li>
+                  <li class="nav-item my-auto">
+                    <a class="nav-link" href="#equipo">Equipo</a>
+                  </li>
+                  <li class="nav-item my-auto">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
     </section>
 
     <section id="banner">
@@ -68,10 +95,10 @@
         </div>
     </section>
 
-    <section id="equipo">
+    <section id="equipo" class="py-5">
         <!-- aqui van nuestros card con nuestras imagenes, cargas la nuestra en la carpeta images-->
         <div class="container">
-            <h1 class="text-center">Nuestros Equipo</h1>
+            <h1 class="text-center">Nuestro Equipo</h1>
             <hr>
             <p id='textoEquipo' class="text-center my-5"></p>
             <div class="row d-flex justify-content-center mt-5">
@@ -116,7 +143,7 @@
         </div>
     </section>
 
-    <section id="contacto">
+    <section id="contacto" class="my-5">
         <!-- formulario de contacto-->
         <div class="container">
             <h1 class="text-center">Contacto</h1>
@@ -133,7 +160,7 @@
                 <div class="col-5 col-md-6 col-lg-3 text-center my-4">
                     <h2>PIXEL PRO</h2>
                     <img src="image/logo pp.png"
-                        class="img-fluid" alt="" srcset="" width="70%">
+                        class="img-fluid rounded-4" alt="" srcset="" width="65%">
                 </div>
                 <div class="col-12 col-md-6 col-lg-3 text-center my-4">
                     <h2>Nosotros</h2>
@@ -151,7 +178,7 @@
                 <div class="col-12 col-md-6 col-lg-3 text-center my-4">
                     <h2>Contacto</h2>
                     <ul class="list-unstyled">
-                        <li><span><i class="bi bi-envelope me-2"></i>pixelpro@gmail.com</span></liclass=>
+                        <li><span><i class="bi bi-envelope me-2"></i>pixelpro@gmail.com</span></li>
                         <li><span><i class="bi bi-facebook me-2"></i>facebook.com/pixelpro</span></li>
                         <li><span><i class="bi bi-instagram me-2"></i>@pizelproinst</span></li>
                     </ul>
