@@ -18,10 +18,10 @@ const equipo = [
         urlImagen: 'image/carlos-quinteros.jpg',
     },
     {
-        nombre: 'aqui va naiara',
+        nombre: 'Naiara Valenzuela',
         titulo: 'Ingeniero en Sistemas',
-        perfil: 'Desarrollador Web Full Stack',
-        urlImagen: 'image/',
+        perfil: 'Analista de Base de Datos',
+        urlImagen: 'image/naiara-valenzuela1.jpg',
     }
 ]
 
