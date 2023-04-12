@@ -70,3 +70,7 @@ h4{
     border-radius: 60px;
     border: none;
 }
+
+.custom-button:disabled{
+    color: red;
+}

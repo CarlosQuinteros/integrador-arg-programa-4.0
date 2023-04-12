@@ -130,18 +130,21 @@
             <hr>
             <br>
             <div class="row justify-content-center my-5">
-                <form class="row col-10 col-md-8">
+                <form class="row col-10 col-md-8" action="">
                     <div class="col-6">
                         <label for="labelNombre" class="form-label">Nombre</label>
                         <input type="text" class="form-control" id="nombreInput" placeholder="Ingrese su nombre" required>
+                        <p id="nombre-error"></p>
                     </div>
                     <div class="col-6">
                         <label for="labelApellido" class="form-label">Apellido</label>
                         <input type="text" class="form-control" id="apellidoInput" placeholder="Ingrese su apellido" required>
+                        <p id="apellido-error"></p>
                     </div>
                     <div class="col-12 col-md-6 mt-4">
                         <label for="labelEmail" class="form-label">Email</label>
                         <input type="email" class="form-control" id="emailInput" placeholder="Ingrese su correo" required>
+                        <p id="email-error"></p>
                     </div>
                     <div class="col-12 col-md-6 mt-4">
                         <label for="labelPais" class="form-label">Pais</label>
@@ -149,11 +152,13 @@
                             <option selected> Seleccione un país</option>
                             <!--pais generados desde contacto.js-->
                         </select>
+                        <p id="pais-error"></p>
                     </div>
                     <div class="col-12 mt-4">
                         <label for="inputtextarea" class="form-label">Mensaje</label>
-                        <textarea class="form-control" placeholder="Envianos tu consulta" id="inputtextarea"
+                        <textarea class="form-control" placeholder="Envianos tu consulta" id="mensajeInput"
                             rows="3" style="max-height: 250px;" required></textarea>
+                        <p id="mensaje-error"></p>
                     </div>
                     <div class="col-12 mt-4">
                         <div class="form-check form-switch">
@@ -162,7 +167,7 @@
                         </div>
                     </div>
                     <div class="col-12 d-flex justify-content-center py-4">
-                        <button type="submit" class="custom-button">Enviar consulta</button>
+                        <button type="button" class="custom-button" onclick="enviarFormulario()">Enviar consulta</button>
                     </div>
                 </form>
             </div>
