@@ -82,4 +82,12 @@ function enviarFormulario(){
         icon:'success',
         text: `Mensaje Recibido: ${formulario.mensaje}. Te contactaremos a la direccion de correo ${formulario.email}`
     })
+
+    //reset del formulario
+    $('#mensajeInput').removeClass('is-valid').val('')
+    $('#nombreInput').removeClass('is-valid').val('')
+    $('#apellidoInput').removeClass('is-valid').val('')
+    $('#emailInput').removeClass('is-valid').val('')
+    $('#pais').removeClass('is-valid').val('Seleccione un páis')
+
 }
