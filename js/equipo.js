@@ -19,7 +19,7 @@ const equipo = [
     },
     {
         nombre: 'Naiara Valenzuela',
-        titulo: 'Ingeniero en Sistemas',
+        titulo: 'Licenciada en Sistemas',
         perfil: 'Analista de Base de Datos',
         urlImagen: 'image/naiara-valenzuela1.jpg',
     }
@@ -32,7 +32,7 @@ $(document).ready(function () {
         $('#cardsEquipo').append(
             `<article class="col-8 col-md-6 col-lg-3 card bg-light m-2 d-flex flex-column align-items-center"
                 data-aos="flip-left">
-                <img src=${integrante.urlImagen} class="img-thumbnail rounded-circle object-fit-cover"
+                <img src=${integrante.urlImagen} class="rounded-circle object-fit-cover"
                     alt="${integrante.nombre} image" width="100px" height="100px">
                 <div class="mt-3">
                     <h5 class="fw-bold text-center">${integrante.nombre}</h5>
