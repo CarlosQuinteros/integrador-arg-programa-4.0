@@ -74,3 +74,16 @@ h4{
 .custom-button:disabled{
     color: red;
 }
+
+h5{
+    color:black;
+    font-size: 25px;
+    background-color: #e3e3e3;
+}
+
+.carousel-item{
+    object-fit: cover;
+    object-position: center;
+    height: 90vh;
+    
+}
