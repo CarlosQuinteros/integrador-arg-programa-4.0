@@ -81,7 +81,7 @@ h5{
     background-color: #e3e3e3;
 }
 
-.carousel-item{
+.carousel-item>img{
     object-fit: cover;
     object-position: center;
     height: 90vh;
