@@ -13,6 +13,18 @@ const obtenerEmpresas = async () => {
     console.log(empresas)
     
     //solo resta renderizar los logos en el html
+    empresas.forEach(empresa => {  
+      $('#cardsClientes').append(
+        `<article class="col-3 col-md-2 col-lg-2 card bg-light m-2 d-flex flex-column align-items-center"
+              data-aos="zoom-in">
+              <img src=${empresa.logo} class="object-fit-cover"
+                  alt="${empresa.nombre} image" width="100px">
+              <div class="mt-3">
+                  <h6 class="fw-bold text-center">${empresa.nombre}</h6>
+              </div>
+          </article>`
+        )
+      })
 }
 
 obtenerEmpresas();
