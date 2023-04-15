@@ -53,8 +53,42 @@ h4{
     font-weight: 700;
 }
 
-#equipo,#presupuesto{
+#equipo{
     background-color: #EFF3F8;
+
+}
+#presupuesto{
+    background-color: #EFF3F8;
+
+}
+#range{
+    width: 100%;
+    height: 15px;
+    padding: 20px;
+    
+}
+.range::-webkit-range-thumb{
+    -webkit-appearance: none;
+    width: 40px;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+}
+.range::webkit-range-thumb:hover{
+    box-shadow: 0 0 0 3px #00cc,
+                0 0 0 6px, white;
+}
+.range:active::-webkit-range-thumb{
+    box-shadow: 0 0 0 3px #00cc,
+                0 0 0 6px, white;
+}
+
+
+.btn btn-outline-primary{
+    padding: 20px;
+    border-radius: 60px;
+    align-items: center;
+
 }
 
 .navbar-brand>img{
