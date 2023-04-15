@@ -6,7 +6,7 @@ const paises = [
     'Cuba',
     'Ecuador',
     'Guatemala',
-    'onduras',
+    'Honduras',
     'México',
     'Nicaragua',
     'Panamá',
