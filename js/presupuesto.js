@@ -1,3 +1,32 @@
+const tamaños = [
+    "Pequeña",
+    "Mediana",
+    "Grande",
+]
+
+const rubros = [
+    "Comercio",
+    "Entretenimiento",
+    "Teatro",
+    "Biblioteca",
+    "Transporte",
+    "Contaduría",
+    "Musica",
+]
+
+
+$(document).ready(function () {
+    rubros.forEach(rubro => {
+        $('#rubro').append(`<option value=${rubro}>${rubro}</option>`)
+    })
+});
+
+$(document).ready(function () {
+    tamaños.forEach(tamaño => {
+        $('#tamaños').append(`<option value=${tamaño}>${tamaño}</option>`)
+    })
+});
+
 var range = document.getElementById("range");
 var val= document.getElementById("value");
 val.innerHTML = range.value;
@@ -7,17 +36,20 @@ range.oninput = function () {
 
 
 function cotizar() {
-
+    const costoBase = 50000;
+    let total = 0;
     const cotizacion = {
         tamaño: $('#tamaños').val(),
         rubro: $('#rubro').val(),
-        servicio: $('#servicio').val(),
-        usuarios: $('#value').val(),
-       integracion: $('#checkselected').val(),
-        
+        usuarios: $('#range').val(),
+        integracion:{
+            mercadoPago: $('#mercadoPago').is(":checked"),
+            afip: $('#afip').is(":checked")
+        }
     }
+    //console.log(cotizacion);
 
-    if(presupuesto.tamaños === ''|| presupuesto.tamaños === 'Seleccione tamaño de la empresa') {
+    if(cotizacion.tamaño === ''|| cotizacion.tamaño === 'Seleccione tamaño de la empresa') {
         $('#tamaños-error').css("color", "red").text('Es necesaria esta informacion para continuar')
         $('#tamaños').addClass('is-invalid')
         return
@@ -26,7 +58,7 @@ function cotizar() {
         $('#tamaños').removeClass('is-invalid').addClass('is-valid')
     }
 
-    if(presupuesto.rubro === ''|| presupuesto.rubro === 'Seleccione rubro') {
+    if(cotizacion.rubro === ''|| cotizacion.rubro === 'Seleccione rubro') {
         $('#rubro-error').css("color", "red").text('Es necesaria esta informacion para continuar')
         $('#rubro').addClass('is-invalid')
         return
@@ -35,35 +67,31 @@ function cotizar() {
         $('#rubro').removeClass('is-invalid').addClass('is-valid')
     }
 
-    if(presupuesto.servicio === ''|| presupuesto.servicio === 'Seleccione servicio a solicitar') {
-        $('#servicio-error').css("color", "red").text('Es necesaria esta informacion para continuar')
-        $('#servicio').addClass('is-invalid')
-        return
-    }else{
-        $('#servicio-error').css("color", "green").text('')
-        $('#servicio').removeClass('is-invalid').addClass('is-valid')
+    switch (cotizacion.tamaño) {
+        case 'Pequeña':
+            total = costoBase * (cotizacion.usuarios)/100;
+            break;
+        case 'Mediana':
+            total = costoBase * (cotizacion.usuarios)/100;
+            break;
+        case 'Grande':
+            total = costoBase * (cotizacion.usuarios)/100;
+
     }
 
-    if(presupuesto.checkselected === ''){
-        $('#check-error').css("color","red").text('Debes completar este campo')
-        $('#checkselected').addClass('is-invalid')
-        return
-    }else{
-        $('#check-error').css("color", "green").text('')
-        $('#checkselected').removeClass('is-invalid').addClass('is-valid')
-    }
-    //console.log(formulario);
     Swal.fire({
-        title: `Gracias Recibimos tu mensaje!`,
+        title: `Cotización para una empresa ${cotizacion.tamaño} del rubro ${cotizacion.rubro} y aproximadamente ${cotizacion.usuarios.toLocaleString()} usuarios. TOTAL: $ ${total.toLocaleString()}`,
         icon:'success',
-        text: `Mensaje Recibido: . Te contactaremos a la direccion de correo `
+        text: `Integracion con Mercado Pago: ${cotizacion.integracion.mercadoPago ? 'SÍ' : 'NO' }.\nIntegracion con AFIP: ${cotizacion.integracion.afip ? 'SI' : 'NO' }`,
     })
 
     //reset del formulario
     $('#tamaños').removeClass('is-valid').val('Seleccione tamaño de la empresa')
     $('#rubro').removeClass('is-valid').val('Seleccione rubro')
-    $('#servicio').removeClass('is-valid').val('Seleccione servicio a solicitar')
     $('#usuarios').removeClass('is-valid').val('')
-    $('#integracion').removeClass('is-valid').val('')
+    $('#range').val(100)
+    $('#value').text(100)
+    $('#mercadoPago').prop("checked", false);
+    $('#afip').prop('checked', false);
 
 }

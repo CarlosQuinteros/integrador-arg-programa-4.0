@@ -118,3 +118,16 @@ h4{
     border-radius: 20px;
     background-color: #EFF3F8;
 }
+
+.accordion-body{
+    padding: 2rem;
+}
+
+@media (min-width: 1200px){
+    .accordion-body{
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+}

@@ -10,7 +10,7 @@ const obtenerEmpresas = async () => {
         'logo': e.refs.logo_image
       }
     })
-    console.log(empresas)
+    //console.log(empresas)
     
     //solo resta renderizar los logos en el html
     empresas.forEach(empresa => {  
